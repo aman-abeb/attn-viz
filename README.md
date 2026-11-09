@@ -64,11 +64,11 @@ Tests run fully offline with fixed seeds; no network access or API keys are need
 <!-- builder:roadmap:start -->
 ## Status
 
-**In active development:** 1 of 3 milestones done.
+**In active development:** 2 of 3 milestones done.
 
 ## Roadmap
 
 - [x] **Numpy attention core with tests**: Implement scaled dot-product attention, causal masking, and a multi-head attention block in pure numpy under src/attnviz/. Add pytest tests for output shapes, softmax rows summing to 1, causal mask preventing future leakage, seed determinism, and a runnable demo: python -m attnviz.demo prints a small attention matrix.
-- [ ] **Trainable attention-only copier**: Add manual backprop for the attention-only model, a synthetic sequence-copying dataset generator, and a training CLI: python -m attnviz.train --epochs 200 --out model.npz. Tests include numerical gradient checks, loss decreasing over epochs, and held-out exact-match accuracy above threshold; everything runs offline with fixed seeds.
+- [x] **Trainable attention-only copier**: Add manual backprop for the attention-only model, a synthetic sequence-copying dataset generator, and a training CLI: python -m attnviz.train --epochs 200 --out model.npz. Tests include numerical gradient checks, loss decreasing over epochs, and held-out exact-match accuracy above threshold; everything runs offline with fixed seeds.
 - [ ] **Heatmap visualizer, CLI, and README showcase**: Add a matplotlib Agg-backend renderer that saves per-head attention heatmaps for sample inputs, plus python -m attnviz.viz --model model.npz --out examples/. Generate committed example PNGs, write a README that embeds the heatmaps and explains the learned copy pattern, and add tests asserting PNGs are created, non-empty, and backed by valid probability matrices.
 <!-- builder:roadmap:end -->

@@ -6,10 +6,24 @@ from attnviz.attention import (
     scaled_dot_product_attention,
     softmax,
 )
+from attnviz.data import (
+    BOS_TOKEN,
+    EOS_TOKEN,
+    FIRST_CONTENT_TOKEN,
+    make_copy_dataset,
+    make_copy_splits,
+)
+from attnviz.model import AttentionCopier
 
 __all__ = [
+    "AttentionCopier",
+    "BOS_TOKEN",
+    "EOS_TOKEN",
+    "FIRST_CONTENT_TOKEN",
     "MultiHeadAttention",
     "apply_causal_mask",
+    "make_copy_dataset",
+    "make_copy_splits",
     "scaled_dot_product_attention",
     "softmax",
 ]
